@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>index</title>
+        <meta name="description" content="">
+        <meta name="author" content="Bala Krishna">
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link type="text/css" href=""/>
+
+        <script src="../scripts/jquery.js"></script>
+        <script src="myplugin.js"></script>
+    </head>
+    <body>
+        <div id="pashaa">
+            <label>Hai Balu</label>
+            <input type="text" required>
+            <br>
+            <input type="text" required>
+            <br>
+            <input type="text" required>
+            <br>
+            <input type="text" required>
+            <br>
+            <button name="submit">Submit</button>
+        </div>
+        <script>
+            $(function(){
+                $("button").on("click",function(event) {
+                    $("#pashaa").myplugin();
+                });
+            }); 
+        </script>
+    </body>    
+</html>
