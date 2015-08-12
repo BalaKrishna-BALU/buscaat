@@ -16,10 +16,11 @@
         <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <link type="text/css" href=""/>
+
+        <link rel="stylesheet" type="text/css" href="buscaat.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-        <script src="myplugin.js"></script>
+        <script src="buscaat.js"></script>
     </head>
     <body>
         <div id="pashaa">
@@ -40,11 +41,12 @@
             <br>
             <br>
             <button name="submit">Submit</button>
+            <br><br>
         </div>
         <script>
             $(function(){
                 $("button").on("click",function(event) {
-                    $("#pashaa").myplugin();
+                    $("#pashaa").buscaat();
                 });
             }); 
         </script>
