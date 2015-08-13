@@ -26,7 +26,7 @@
         <div id="pashaa">
             <label>Email </label>
             <input type="email" required>
-            <br> 
+            <br>
             <br>
             <label>Mobile No. </label>
             <input type="number" required>
@@ -40,15 +40,26 @@
             <input type="date" required>
             <br>
             <br>
-            <button name="submit">Submit</button>
-            <br><br>
+            <label>Accept terms and conditions </label>
+            <input type="checkbox" required>
+            <br>
+            <br>
+            <label>Accept another terms and conditions </label>
+            <input type="radio" required>
+            <br>
+            <br>
+            <button name="submit">
+                Submit
+            </button>
+            <br>
+            <br>
         </div>
         <script>
-            $(function(){
-                $("button").on("click",function(event) {
+            $(function() {
+                $("button").on("click", function(event) {
                     $("#pashaa").buscaat();
                 });
-            }); 
+            });
         </script>
-    </body>    
+    </body>
 </html>
