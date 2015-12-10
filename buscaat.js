@@ -11,14 +11,16 @@
 			base.getval();
 		};
 		base.getval = function() {
-			base.find('input:required').each(function(index, el) {
-				if ($(el).val()) {
-					checkType(el);
-				} else {
-					($(el).next("span.errorMessage").length > 0) ? ($(el).next("span.errorMessage").text('This field is required')) : ($(el).after("<span class='errorMessage'>This field is required</span>"));
+			base.children().each(function(index, el) {
+				if($(el).is(":required")){					
+					if ($(el).val()) {
+						checkType(el);
+					} else {
+						($(el).next("span.errorMessage").length > 0) ? ($(el).next("span.errorMessage").text('This field is required')) : ($(el).after("<span class='errorMessage'>This field is required</span>"));
+					}
 				}
 			});
-		};
+		};		
 		function checkType(element) {
 			switch(element.type) {
 			case "email":
@@ -103,7 +105,14 @@
 					($(element).next("span.errorMessage").length > 0) ? ($(element).next("span.errorMessage").text('Please select it in order to proceed')) : ($(element).after("<span class='errorMessage'>Please select it in order to proceed</span>"));
 				}
 				break;
-			default:
+			case "select-one":
+				if ($(element).val()) {
+					$(element).next("span.errorMessage").remove();
+				} else {
+					($(element).next("span.errorMessage").length > 0) ? ($(element).next("span.errorMessage").text('Please select any option')) : ($(element).after("<span class='errorMessage'>Select any option</span>"));
+				}
+			break;
+				default:
 				console.log("default", element);
 			}
 		};
